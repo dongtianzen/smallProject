@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Info windows</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel='stylesheet' href='../plugin.css'>
+    <script src="https://use.fontawesome.com/e525368239.js"></script>
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <script>
+
+      // This example displays a marker at the center of Australia.
+      // When the user clicks the marker, an info window opens.
+
+      function initMap() {
+        var uluru = {lat: -25.363, lng: 131.044};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 4,
+          center: uluru
+        });
+
+        var contentString = '<div id="content" class="panel panel-default width-460">'+
+                              '<div class="bg-199ed5 height-42 padding-12">'+
+                                '<h3 class="panel-title color-fff">Program Name</h3>'+
+                              '</div>'+
+                              '<div class="panel-body">'+
+                                '<div class="row margin-top-10">'+
+                                  '<div class="col-md-3">'+
+                                    '<div>'+
+                                      '<i class="fa fa-bookmark color-199ed5" aria-hidden="true"></i>'+
+                                      '<span> Carrdio</span>'+
+                                    '</div>'+
+                                  '</div>'+
+                                  '<div class="col-md-3">'+
+                                    '<i class="fa fa-calendar-o color-199ed5" aria-hidden="true"></i>'+
+                                    '<span> Oct 19,2017</span>'+
+                                  '</div>'+
+                                  '<div class="col-md-3">'+
+                                    '<i class="fa fa-map-marker color-199ed5" aria-hidden="true"></i>'+
+                                    '<span> Motreal, QC</span>'+
+                                  '</div>'+
+                                '</div>'+
+                                '<div class="margin-top-16">'+
+                                  '<span>Event Type: OLA</span>'+
+                                '</div>'+
+                                '<div class="margin-top-16">'+
+                                  '<span>Speaker: Ronald Mund</span>'+
+                                '</div>'+
+                                '<div class="margin-top-16">'+
+                                  '<span>Venue: Restaurant</span>'+
+                                '</div>'+
+                                '<div class="row margin-top-20">'+
+                                  '<div class="col-md-6 text-align-center">'+
+                                    '<div>'+
+                                      '<span>ATTENDEES</span>'+
+                                    '</div>'+
+                                    '<div>'+
+                                      '<span class="color-199ed5 font-size-16">25</span>'+
+                                    '</div>'+
+                                  '</div>'+
+                                  '<div class="col-md-6 text-align-center">'+
+                                    '<div>'+
+                                      '<span>RESPONSES</span>'+
+                                    '</div>'+
+                                    '<div>'+
+                                      '<span class="color-199ed5 font-size-16">21</span>'+
+                                    '</div>'+
+                                  '</div>'+
+                                '</div>'+
+                                '</div>'+
+                              '</div>'+
+                            '</div>';
+
+        var infowindow = new google.maps.InfoWindow({
+          content: contentString
+        });
+
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map,
+          title: 'Uluru (Ayers Rock)'
+        });
+        marker.addListener('click', function() {
+          infowindow.open(map, marker);
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCqCGAZ6L98e1hCzMHcyt6lemAEtjN8OEY&callback=initMap">
+    </script>
+  </body>
+</html>
