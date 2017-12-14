@@ -8,16 +8,15 @@ new Vue({
     columns: [],
     data: [],
     options: {
-      sortable: ['option']
     }
   },
   created: function () {
     var self = this;
-    axios.get('tableData.json').then((response) => {
+    axios.get('getJsonData2.php').then((response) => {
+      // self.options = response.data.options;
       self.columns = response.data.columns;
       self.data = response.data.data;
-      self.options = self.options;
-      console.log(self.options);
+
     })
     .catch((error) => {
       console.log(error);
