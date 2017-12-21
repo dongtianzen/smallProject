@@ -101,6 +101,9 @@
 .bg-6666cc {
   background-color: #6666cc;
 }
+.bg-673ab7 {
+  background-color: #673AB7;
+}
 .bg-96c11f {
   background-color: #96c11f;
 }
@@ -194,7 +197,7 @@
   border: 0px;
 }
 .border-1-eee {
-  border: 1px solid #eee;
+  border: 2px solid #eee;
 }
 .border-1-000 {
   border: 1px solid #000;
@@ -216,6 +219,12 @@
 }
 .border-right-2-fff {
   border-right: 2px solid #fff;
+}
+.border-right-2-e2e2e2 {
+  border-right: 2px solid #E2E2E2;
+}
+.border-left-2-e2e2e2 {
+  border-left: 1px solid #E2E2E2;
 }
 .border-top-1-e7e7e7 {
   border-top: 1px solid #e7e7e7;
@@ -381,6 +390,9 @@
 .color-ec247f {
   color: #ec247f;
 }
+.color-818384 {
+  color: #818384;
+}
 .color-f00000 {
   color: #f00000;
 }
@@ -440,6 +452,9 @@
 }
 .font-lighter {
   font-weight: lighter;
+}
+.font-normal {
+  font-weight: normal;
 }
 .font-weight-100 {
   font-weight: 100;
@@ -1005,7 +1020,10 @@
   margin-top: 200px;
 }
 .margin-top-n-4 {
-  margin-top: -24px;
+  margin-top: -2px;
+}
+.margin-top-n-16 {
+  margin-top: -16px;
 }
 .margin-top-n-20 {
   margin-top: -20px;
@@ -1063,6 +1081,9 @@
 }
 .margin-bottom-n-10 {
   margin-bottom: -10px;
+}
+.margin-bottom-n-16 {
+  margin-bottom: -16px;
 }
 .margin-bottom-n-24 {
   margin-bottom: -24px;
@@ -1210,6 +1231,9 @@
 .padding-30 {
   padding: 30px;
 }
+.padding-50 {
+  padding: 50px;
+}
 .padding-0-8 {
   padding: 0px 8px;
 }
@@ -1356,7 +1380,7 @@
   padding-right: 10px;
 }
 .padding-right-12 {
-  padding-right: 12px;
+  padding-right: 22px;
 }
 .padding-right-pt-14 {
   padding-right: 14%;
