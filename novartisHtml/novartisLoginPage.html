@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://use.fontawesome.com/e525368239.js"></script>
+    <style type="text/css">
+      body, html {
+        height: 100%;
+        margin: 0px;
+      }
+      .login-wrapper .login-background-wrapper {
+        background-image: url("backgroundImg.png");
+        background-repeat: repeat;
+        height: 100%;
+      }
+      .login-wrapper .login-form-wrapper {
+        padding-top: 100px;
+        padding-bottom: 100px;
+        width: 440px;
+        margin: auto;
+      }
+      .login-wrapper .login-form-border-wrapper {
+        border: 3px solid white;
+        border-radius: 15px;
+        background-color: white;
+      }
+      .login-wrapper .login-form-position-wrapper {
+        padding-top: 60px;
+        padding-bottom: 60px;
+        text-align: center;
+        margin: auto;
+      }
+      .login-wrapper .site-logo img {
+        width: 280px;
+        padding-top: 20px;
+        padding-bottom: 30px;
+      }
+      .login-wrapper .form-input {
+        color: #929092;
+        padding-bottom: 30px;
+      }
+
+      .login-wrapper .linkForgot a {
+        color: #8AB1E7;
+        padding-right: 156px;
+
+      }
+      .login-wrapper .form-submit {
+        text-align: center;
+        margin-top: 30px;
+      }
+      .login-wrapper #submitButton {
+        width: 130px;
+        height: 40px;
+      }
+      .login-wrapper .login-form-title span {
+        color: #8AB1E7;
+        font-size: 22px;
+        font-weight: 200;
+      }
+      .login-wrapper .form-input input {
+        border-top: transparent;
+        border-left: transparent;
+        border-right: transparent;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+      }
+      .login-wrapper .form-control {
+        font-family: "FontAwesome";
+        width: 50%;
+        margin: auto;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="login-wrapper">
+      <div class="login-background-wrapper">
+        <div class="login-form-wrapper">
+
+            <div class="login-form-border-wrapper">
+              <div class="login-form-position-wrapper">
+                <form>
+                  <div class="site-logo">
+                    <img src="https://www.novartis.ca/sites/all/themes/novartis/novartis-logo.svg" alt="Novartis logo">
+                  </div>
+                  <div class="login-form-title">
+                    <span>
+                      Med Ed Dashboard
+                    </span>
+                  </div>
+                  <br />
+                  <div class="form-input">
+                    <div>
+                      <input type="email" class="form-control" name="Email" placeholder="&#xF003; &nbsp; &nbsp;Email">
+                      <br />
+                    </div>
+                    <div>
+                      <input type="password" class="form-control" name="password" placeholder="&#xf13e; &nbsp; &nbsp;Password">
+                      <br />
+                      <span class="linkForgot">
+                        <a href="#">Forgot?</a>
+                      <br />
+                      </span>
+                    </div>
+                  </div>
+
+                  <div class="form-submit">
+                    <button id="submitButton" type="button" class="btn btn-primary">Login</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+
+        </div>
+      </div>
+    </div>
+
+  </body>
+
+</html>

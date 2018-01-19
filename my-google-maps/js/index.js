@@ -8,15 +8,28 @@ function initialize() {
     var map = new google.maps.Map(document.getElementById('map-canvas'), {
       zoom: 5,
       center: {
-        lat: -15.7942357,
-        lng: -47.8821945
+        lat: -19.3286,
+        lng: -43.93888
       }
     });
 
     var infowindow = new google.maps.InfoWindow();
-
+    var latLngs = new google.maps.LatLng("-19.3286","-43.93888");
+    var existingMarker = [latLngs];
+    var countMarkers = 0;
     var markers = locations.map(function(location) {
-      var latLngs = new google.maps.LatLng(location.lat,location.lng);
+
+      latLngs = new google.maps.LatLng(location.lat,location.lng);
+
+      for (var i = 1; i < countMarkers; i++) {
+        if (latLngs.equals(existingMarker[i])) {
+          var newLat = latLngs.lat() + 0.0005;
+          var newLng = latLngs.lng();
+          latLngs = new google.maps.LatLng(newLat, newLng);
+        }
+      }
+      countMarkers = existingMarker.push(latLngs);
+
       var marker = new google.maps.Marker({
         position: latLngs
       });
@@ -29,6 +42,7 @@ function initialize() {
     });
 
     var markerCluster = new MarkerClusterer(map, markers, {
+      maxZoom: 9,
       imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'
     });
 
